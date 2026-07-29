@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV_LINKS } from "../Lib/nav";
+import { useState } from "react";
 
 export default function Header() {
     const pathname = usePathname();
@@ -11,6 +12,8 @@ const isActive = (href: string) =>
   href === "/"
     ? pathname === "/"
     : pathname.startsWith(href);
+    //hamburger
+    const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <nav className="max-w-7xl mx-auto h-16 flex items-center justify-between px-6">
@@ -21,7 +24,9 @@ const isActive = (href: string) =>
         </Link>
 
         {/* Menu */}
-        <ul className="flex items-center gap-1">
+        <ul className="hidden md:flex items-center gap-1">
+          {/* hidden → HP tidak tampil.
+              md:flex → mulai ukuran md tampil. */}
 						{PRIMARY_NAV_LINKS.map((link) => (
 							<li key={link.href} className="relative group">
 								<Link
@@ -66,12 +71,12 @@ const isActive = (href: string) =>
           href={item.href}
           className="block p-4 hover:bg-gray-100 transition"
         >
-          <h3 className="font-semibold">
+          <h3 className="font-semibold text-blue-600">
             {item.label}
           </h3>
 
           {"description" in item && (
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-black">
               {item.description}
             </p>
           )}
@@ -83,19 +88,53 @@ const isActive = (href: string) =>
 						))}
 					</ul>
         {/* Button */}
-        <div className="flex items-center gap-3 text-black">
+       <div className="flex items-center gap-3">
 
-          <Link href="/login">
-            Login
-          </Link>
-
-          <button className="bg-blue-600 px-5 py-2 rounded-lg text-white hover:bg-blue-700">
-            Demo
+          {/* Tombol hamburger hanya di HP */}
+          <button
+            className="md:hidden text-2xl text-black"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            ☰
           </button>
 
-        </div>
+          {/* Login & Demo hanya di Desktop */}
+          <div className="hidden md:flex items-center gap-3 text-black">
+            <Link href="/login">
+              Login
+            </Link>
 
+            <button className="bg-blue-600 px-5 py-2 rounded-lg text-white hover:bg-blue-700">
+              Demo
+            </button>
+          </div>
+
+</div>
       </nav>
+      {isOpen && (
+  <div className="md:hidden bg-white border-t text-blue-400">
+    {PRIMARY_NAV_LINKS.map((link) => (
+      <Link
+        key={link.href}
+        href={link.href}
+        className="block px-6 py-3 border-b hover:bg-gray-100"
+      >
+        {link.label}
+      </Link>
+    ))}
+
+    <Link
+      href="/login"
+      className="block px-6 py-3 border-b"
+    >
+      Login
+    </Link>
+
+    <button className="m-4 w-[calc(100%-2rem)] bg-blue-600 text-white py-2 rounded-lg">
+      Demo
+    </button>
+  </div>
+)}
     </header>
   );
 }

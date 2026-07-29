@@ -20,7 +20,7 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
     label: "Fitur",
   },
   {
-    href: "/pricing",
+    href: "/price",
     label: "Harga",
   },
   {
