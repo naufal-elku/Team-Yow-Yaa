@@ -5,6 +5,8 @@
   --color-foreground: #f5f5f5;
   --color-primary: #057ce4;
   --color-secondary: #e8f4ff;
+  --color-font-primary: #252B2B;
+  --color-font-secondary: #535658; 
 }
 
 @layer base {
