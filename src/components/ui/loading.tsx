@@ -1,0 +1,1 @@
+//membuat halaman ketika loading
