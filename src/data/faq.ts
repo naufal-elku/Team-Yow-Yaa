@@ -1,3 +1,5 @@
+import { faqType } from "@/types/faq";
+
 export const faq = [
     {
         id: 1,
