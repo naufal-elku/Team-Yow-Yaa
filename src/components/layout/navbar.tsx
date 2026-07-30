@@ -14,6 +14,11 @@ const isActive = (href: string) =>
     : pathname.startsWith(href);
     //hamburger
     const [isOpen, setIsOpen] = useState(false);
+    //hamburger menu children
+    // Menyimpan menu dropdown yang sedang terbuka.
+    // Nilainya berupa href menu, misalnya "/fitur".
+    // Jika null berarti tidak ada menu yang terbuka.
+    const [openMenu, setOpenMenu] = useState<string | null>(null);
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <nav className="max-w-7xl mx-auto h-16 flex items-center justify-between px-6">
@@ -111,30 +116,70 @@ const isActive = (href: string) =>
 
 </div>
       </nav>
+      {/* Menu Responsif */}
       {isOpen && (
-  <div className="md:hidden bg-white border-t text-blue-400">
-    {PRIMARY_NAV_LINKS.map((link) => (
-      <Link
-        key={link.href}
-        href={link.href}
-        className="block px-6 py-3 border-b hover:bg-gray-100"
-      >
-        {link.label}
-      </Link>
-    ))}
+        <div className="md:hidden bg-white border-t text-gray-500">
 
-    <Link
-      href="/login"
-      className="block px-6 py-3 border-b"
-    >
-      Login
-    </Link>
+          {PRIMARY_NAV_LINKS.map((link)=> (
+            <div key={link.href} className="border-b">
+              {/* untuk submenu children dukungan */}
+              {link.children ? (
+                <>
+                 <button
+                  onClick={() =>
+                    setOpenMenu(openMenu === link.href ? null : link.href)
+                  }
+                  className="w-full flex items-center justify-between px-6 py-3 hover:bg-gray-100"
+                  >
+                    <span>{link.label}</span>
+                    <span>{openMenu === link.href ? "▲" : "▼"}</span>
+                 </button>
 
-    <button className="m-4 w-[calc(100%-2rem)] bg-blue-600 text-white py-2 rounded-lg">
+                 {/* Sub menu */}
+                 {openMenu === link.href && (
+                  <div className="bg-gray-50">
+                    {link.children.map((item) => (
+                      <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-10 py-3 border-t hover:bg-gray-100"
+                      >
+                    <h3 className="font-medium text-blue-600">
+                      {item.label}
+                    </h3>
+
+                    {"description" in item && (
+                      <p className="text-sm text-gray-600">
+                        {item.description}
+                      </p>
+                    )}
+                      </Link>
+                    ))}
+                  </div>
+                 )}
+                </>
+              ) : (
+                <Link href={link.href}
+                  className="block px-6 py-3"
+                >
+                  {link.label}
+                </Link>
+              )}
+            </div>
+          ))}
+
+          <Link
+            href="/login"
+            className="block px-6 py-3 border-b"
+          >
+            Login
+          </Link>
+
+          <button className="m-4 w-[calc(100%-2rem)] bg-blue-600 text-white py-2 rounded-lg">
       Demo
     </button>
-  </div>
-)}
+        </div>
+      )}
     </header>
   );
 }
