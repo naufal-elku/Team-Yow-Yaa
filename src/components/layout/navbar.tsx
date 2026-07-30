@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PRIMARY_NAV_LINKS } from "../Lib/nav";
+import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { useState } from "react";
 
 export default function Header() {
