@@ -50,7 +50,7 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
     ],
   },
   {
-    href: "/kebijakan",
+    href: "/privacy-policy",
     label: "Kebijakan & Privasi",
   },
 ];
