@@ -54,3 +54,4 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
     label: "Kebijakan & Privasi",
   },
 ];
+
