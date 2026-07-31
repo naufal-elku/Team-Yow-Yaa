@@ -55,3 +55,8 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
   },
 ];
 
+export const NAV_LINKS = {
+  login : "/login",
+  demo : "/login-demo",
+} as const ;
+

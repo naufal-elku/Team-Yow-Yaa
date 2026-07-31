@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { useState } from "react";
 import Logo from "./logo";
+import { useRouter } from "next/navigation";
+import { NAV_LINKS } from "@/data/navigation";
 
 export default function Header() {
   const pathname = usePathname();
@@ -16,18 +18,19 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   // Dropdown menu state untuk mobile
   const [openMenu, setOpenMenu] = useState<string | null>(null);
-
+  //router button login demo
+  const router = useRouter();
   return (
     <header className="fixed left-0 top-0 w-full h-20 border-b border-gray-200 bg-white z-50">
       <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-[10px] px-6 md:px-10 lg:px-[120px] py-[18px]">
         {/* Logo */}
         <div className="flex items-center gap-6">
           <Link href="/">
-            <Logo />
+            <Logo width={114} height={32}/>
           </Link>
 
           {/* Menu Navigation (Sesuai Kriteria Figma: gap 24px / gap-6) */}
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden lg:flex items-center gap-6">
             {PRIMARY_NAV_LINKS.map((link) => (
               <li key={link.href} className="relative group gap-1">
                 <Link
@@ -85,7 +88,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* Tombol hamburger hanya di HP */}
           <button
-            className="md:hidden text-2xl text-black w-6 h-6 flex items-center justify-center"
+            className="lg:hidden text-2xl text-black w-6 h-6 flex items-center justify-center"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle Menu"
           >
@@ -93,24 +96,24 @@ export default function Header() {
           </button>
 
           {/* Login & Demo hanya di Desktop */}
-          <div className="hidden md:flex items-center gap-3 text-black">
-            <Link
-              href="/login"
-              className="px-4 py-2 hover:text-blue-600 font-medium transition"
-            >
+          <div className="hidden lg:flex items-center gap-3 text-black">
+            <button onClick={() => router.push(NAV_LINKS.login)}
+              className="w-[79px] h-[44px] px-[18px] py-[10px] rounded-[8px] flex items-center justify-center gap-2 bg-transparent text-gray-600 text-base font-medium leading-6 hover:bg-gray-100 hover:text-gray-900 transition-colors">
               Login
-            </Link>
+             </button>
 
-            <button className="bg-blue-600 px-5 py-2 rounded-lg text-white hover:bg-blue-700 font-medium transition">
+            <button onClick={() => router.push(NAV_LINKS.demo)}
+               className="h-[44px] px-[18px] py-[10px] rounded-[8px] flex items-center justify-center gap-2 bg-blue-600 text-white text-base font-medium hover:bg-blue-700 transition-colors"
+                >
               Demo
-            </button>
+             </button>
           </div>
         </div>
       </nav>
 
       {/* Menu Responsif (Mobile Drawer) */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <div className="fixed inset-0 z-50 lg:hidden">
           {/* Overlay Blur */}
           <div
             className="absolute inset-0 bg-black/30 backdrop-blur-sm"
@@ -191,17 +194,16 @@ export default function Header() {
 
             {/* Footer Mobile Drawer */}
             <div className="border-t p-6 space-y-3">
-              <Link
-                href="/login"
-                onClick={() => setIsOpen(false)}
-                className="block w-full rounded-full border py-3 text-center font-medium hover:bg-gray-100 transition"
-              >
-                <button>Login</button>
-              </Link>
+             <button onClick={() => router.push(NAV_LINKS.login)}
+              className="w-full lg:w-[79px] h-[44px] px-[18px] py-[10px] rounded-[8px] flex items-center justify-center gap-2 bg-transparent text-gray-600 text-base font-medium leading-6 hover:bg-gray-100 hover:text-gray-900 transition-colors">
+              Login
+             </button>
 
-              <button className="w-full rounded-full py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">
-                Coba Gratis
-              </button>
+              <button onClick={() => router.push(NAV_LINKS.demo)}
+               className="w-full lg:w-auto h-[44px] px-[18px] py-[10px] rounded-[8px] flex items-center justify-center gap-2 bg-blue-600 text-white text-base font-medium hover:bg-blue-700 transition-colors"
+                >
+              Demo
+             </button>
             </div>
           </div>
         </div>
