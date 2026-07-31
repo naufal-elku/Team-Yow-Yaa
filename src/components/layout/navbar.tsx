@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { useState } from "react";
+import Logo from "./logo";
 
 export default function Header() {
   const pathname = usePathname();
@@ -17,56 +18,68 @@ export default function Header() {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   return (
-    <header className="fixed left-0 right-0 top-0 h-20 bg-white border-b z-50">
-      <nav className="max-w-[1200px] mx-auto h-20 px-6 lg:px-10 xl:px-0 flex items-center justify-between">
+    <header className="fixed left-0 top-0 w-full h-20 border-b border-gray-200 bg-white z-50">
+      <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-[10px] px-6 md:px-10 lg:px-[120px] py-[18px]">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-blue-600">
-          Presensi
-        </Link>
+        <div className="flex items-center gap-6">
+          <Link href="/">
+            <Logo />
+          </Link>
 
-        {/* Menu Navigation (Sesuai Kriteria Figma: gap 24px / gap-6) */}
-        <ul className="hidden md:flex items-center gap-6">
-          {PRIMARY_NAV_LINKS.map((link) => (
-            <li key={link.href} className="relative group">
-              <Link
-                href={link.href}
-                className={`flex items-center justify-center h-8 px-2 text-sm font-medium transition-colors relative whitespace-nowrap
-                    after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
-                    after:bg-blue-600 after:origin-center after:scale-x-0 after:transition-transform after:duration-300
+          {/* Menu Navigation (Sesuai Kriteria Figma: gap 24px / gap-6) */}
+          <ul className="hidden md:flex items-center gap-6">
+            {PRIMARY_NAV_LINKS.map((link) => (
+              <li key={link.href} className="relative group gap-1">
+                <Link
+                  href={link.href}
+                  className={`relative flex items-center h-8 gap-1
+                            text-base font-medium leading-6 tracking-normal whitespace-nowrap
+                            transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full
+                            after:bg-blue-600 after:origin-center after:scale-x-0
+                            after:transition-transform after:duration-300
                     ${
                       isActive(link.href)
                         ? "text-blue-600 after:scale-x-100"
                         : "text-gray-600 hover:text-blue-600 hover:after:scale-x-100"
                     }`}
-              >
-                {link.label}
-              </Link>
+                >
+                  {link.label}
 
-              {/* Dropdown Desktop */}
-              {link.children && (
-                <div className="invisible absolute top-full left-1/2 -translate-x-1/2 mt-3 w-80 rounded-xl border bg-white shadow-xl opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 z-50">
-                  {link.children.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block p-4 hover:bg-gray-100 transition"
-                    >
-                      <h3 className="font-semibold text-blue-600">
-                        {item.label}
-                      </h3>
+                  {/* Panah */}
+                  {link.children && (
+                    <span className="transition-transform duration-300 group-hover:rotate-180">
+                      ▼
+                    </span>
+                  )}
+                </Link>
 
-                      {"description" in item && (
-                        <p className="text-sm text-gray-600">
-                          {item.description}
-                        </p>
-                      )}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
+                {/* Dropdown Desktop */}
+                {link.children && (
+                  <div className="invisible absolute top-full left-1/2 -translate-x-1/2 mt-3 w-80 rounded-xl border bg-white shadow-xl opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 z-50">
+                    {link.children.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block p-4 hover:bg-gray-100 transition"
+                      >
+                        <h3 className="font-semibold text-blue-600">
+                          {item.label}
+                        </h3>
+
+                        {"description" in item && (
+                          <p className="text-sm text-gray-600">
+                            {item.description}
+                          </p>
+                        )}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Button & Hamburger */}
         <div className="flex items-center gap-3">
@@ -81,7 +94,10 @@ export default function Header() {
 
           {/* Login & Demo hanya di Desktop */}
           <div className="hidden md:flex items-center gap-3 text-black">
-            <Link href="/login" className="px-4 py-2 hover:text-blue-600 font-medium transition">
+            <Link
+              href="/login"
+              className="px-4 py-2 hover:text-blue-600 font-medium transition"
+            >
               Login
             </Link>
 
@@ -110,7 +126,7 @@ export default function Header() {
                 className="text-2xl font-bold text-blue-600"
                 onClick={() => setIsOpen(false)}
               >
-                Presensi
+                <Logo />
               </Link>
 
               <button
@@ -133,7 +149,9 @@ export default function Header() {
                         }
                         className="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-100 transition"
                       >
-                        <span className="font-medium text-gray-700">{link.label}</span>
+                        <span className="font-medium text-gray-700">
+                          {link.label}
+                        </span>
                         <span className="text-xs text-gray-500">
                           {openMenu === link.href ? "▲" : "▼"}
                         </span>
@@ -178,7 +196,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 className="block w-full rounded-full border py-3 text-center font-medium hover:bg-gray-100 transition"
               >
-                Masuk
+                <button>Login</button>
               </Link>
 
               <button className="w-full rounded-full py-3 bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">
