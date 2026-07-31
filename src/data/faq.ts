@@ -4,7 +4,7 @@ export const faq = [
     {
         id: 1,
         question: "Apa itu Presensi.co.id",
-        answer: "",
+        answer: "Anda dapat memilih paket sesual jumlah karyawan, muial dari paket Basic hingga Enterprise. Pendaftaran dan pembayaran dapat dilakukan secara online. Untuk konsultasi lebih lanjut, Anda juga dapat menjadwalkan demo dengan tim kami.",
     },
     {
         id: 2,
