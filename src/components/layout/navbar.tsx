@@ -1,16 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { PRIMARY_NAV_LINKS } from "@/data/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { PRIMARY_NAV_LINKS, NAV_LINKS } from "@/data/navigation";
 import { useState } from "react";
 import Logo from "./logo";
-<<<<<<< HEAD
-import { useRouter } from "next/navigation";
-import { NAV_LINKS } from "@/data/navigation";
-=======
-import {ChevronDown} from "lucide-react";
->>>>>>> a94f3fed634152483de3ff12719c5445f72ddcab
+import { ChevronDown } from "lucide-react";
 
 export default function Header() {
   const pathname = usePathname();
