@@ -1,6 +1,8 @@
+import React from "react";
 import { Metadata } from "next";
 import { Lock, Database, User, CloudUpload, ScanFace } from "lucide-react";
 import CardBanner from "@/components/common/cardBanner";
+import ArrowUpRight from "@/components/common/iconUpRight"
 
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export default function PrivacyPage() {
         <div className="flex flex-col w-full items-center justify-between mx-auto max-w-348 bg-background">
             <CardBanner>
                 <div className="flex flex-col items-center justify-center w-full max-w-198 mx-auto gap-4 text-center">
-                    <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-snug text-font-primary">
+                    <h1 className="text-[36px] font-semibold tracking-tight leading-snug text-font-primary">
                         Komitmen Kami Untuk Menjaga Privasi Anda
                     </h1>
                     <p className="text-[20px] leading-7.5 font-normal text-font-secondary  text-center">
@@ -23,8 +25,8 @@ export default function PrivacyPage() {
             </CardBanner>
 
 
-            <section className="flex flex-col w-full max-w-6xl mx-auto px-6 gap-20 pt-10 pb-14">
-                <div className="flex flex-col items-start w-full gap-4 text-justify">
+            <section className="flex flex-col w-full max-w-5xl mx-auto px-6 gap-20 pt-10 pb-14">
+                <div className="flex flex-col items-start w-full gap-4 text-justify space-y-7">
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
@@ -36,7 +38,7 @@ export default function PrivacyPage() {
                             </h2>
                         </div>
 
-                        <p className="text-base font-normal text-justify text-font-secondary leading-relaxed pl-12">
+                        <p className="text-base font-normal text-justify text-font-secondary leading-relaxed pl-12 ">
                             Setiap data sensitif ditransmisikan menggunakan sistem keamanan enkripsi level 256 bit, salah satu dari standar enkripsi yang paling aman. Keseluruhan dari data anda akan terenkripsi dan disimpan kedalam server data dan station kami. Presensi juga telah mendapatkan verifikasi dari GeoTrust dengan cipher suite AES-256. Akan tetapi, sama seperti sistem lainnya, keamanan adalah tanggung jawab dari user atau pelanggan dan provider. Disarankan untuk menggunakan password yang kuat dan kompleks serta jangan beritahukan siapapun kecuali orang yang anda percayai.
                         </p>
                     </div>
@@ -111,19 +113,19 @@ export default function PrivacyPage() {
 
                 </div>
             </section>
+            <div className="w-full space-y-4 px-6 mt-[60px] max-w-[1200px] py-[40px] mx-auto my-[40px] bg-foreground rounded-[16px] text-center items-center">
+                <h4 className="font-medium text-[20px] text-font-primary leading-[30px] ">Butuh Informasi Lebih Lanjut?</h4>
 
-            <div className="text-center bg-gray-200 rounded-2xl p-7 max-w-7xl mx-auto my-15">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">Butuh Informasi Lebih Lanjut?</h3>
-
-                <p className="text-sm text-gray-600 mb-6 max-w-lg mx-auto leading-relaxed">Apabila Anda memiliki pertanyaan lebih lanjut terkait kebijakan privasi kami, silakan hubungi
+                <p className="text-sm  max-w-[792px] mb-6 text-center mx-auto leading-relaxed font-normal text-[18px] text-font-secondary">Apabila Anda memiliki pertanyaan lebih lanjut terkait kebijakan privasi kami, silakan hubungi 
                     kami. Tim kami siap memberikan penjelasan secara jelas dan responsif.
                 </p>
 
-                <button className="bg-blue-600 hover:bg-blue-400 text-white font-medium px-5 py-2.5 rounded-2xl">
-                    Hubungi CS
+                <button className="mx-auto flex gap-[8px] bg-primary px-[18px] py-[10px] text-background font-semibold text-[16px] leading-[24px] rounded-[8px]">
+                    Hubungi CS <ArrowUpRight/>
                     <span></span>
                 </button>
             </div>
+
         </div>
     )
 }

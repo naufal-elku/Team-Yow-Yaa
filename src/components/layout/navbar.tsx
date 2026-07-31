@@ -5,8 +5,12 @@ import { usePathname } from "next/navigation";
 import { PRIMARY_NAV_LINKS } from "@/data/navigation";
 import { useState } from "react";
 import Logo from "./logo";
+<<<<<<< HEAD
 import { useRouter } from "next/navigation";
 import { NAV_LINKS } from "@/data/navigation";
+=======
+import {ChevronDown} from "lucide-react";
+>>>>>>> a94f3fed634152483de3ff12719c5445f72ddcab
 
 export default function Header() {
   const pathname = usePathname();
@@ -52,7 +56,7 @@ export default function Header() {
                   {/* Panah */}
                   {link.children && (
                     <span className="transition-transform duration-300 group-hover:rotate-180">
-                      ▼
+                      <ChevronDown />
                     </span>
                   )}
                 </Link>

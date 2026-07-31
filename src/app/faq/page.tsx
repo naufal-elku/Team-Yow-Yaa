@@ -19,15 +19,15 @@ export default function FaqPage() {
   return (
    <section className="w-full">
     <CardBanner>
-      <div className="max-w-[792] mx-auto text-center">
-      <h2 className="font-semibold text-[36px] leading-[44px] mx-auto text-font-primary">
+      <div className="mx-auto max-w-[792px] text-center">
+      <h2 className="font-semibold text-[32px] lg:text-[36px] leading-[44px] mx-auto text-font-primary">
         Pertanyaan yang Sering Ditanyakan
       </h2>
-      <p className="mx-auto mt-[16px] text-[20px] font-normal text-font-secondary">Temukan jawaban atas pertanyaan umum seputar fitur, cara kerja, hingga informasi biaya penggunaan Presensi</p>
+      <p className="mx-auto mt-[16px] text-[18px] lg:text-[20px] font-normal text-font-secondary">Temukan jawaban atas pertanyaan umum seputar fitur, cara kerja, hingga informasi biaya penggunaan Presensi</p>
       </div>
     </CardBanner>
 
-    <div className="max-w-[792px] mx-auto w-full flex flex-col gap-[32px] mt-12 px-6">
+    <div className="max-w-[792px] mx-auto w-full flex flex-col gap-[32px] mt-12">
       {faq.map((faq, index) => (
         <div 
           key={faq.id}
