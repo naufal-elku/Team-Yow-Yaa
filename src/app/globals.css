@@ -8,6 +8,11 @@
   --color-secondary: #e8f4ff;
   --color-font-primary: #252B2B;
   --color-font-secondary: #535658; 
+  --color-gradient-primary: #288EE5;
+  --color-gradient-secondary: #5AB2FE;
+  --color-border-blue-primary: #4CA4F0;
+  --color-bg-blue-secondary: #C8E5FF;
+  --color-border-btn: #E9E9E9;
 }
 
 @layer base {
@@ -20,5 +25,38 @@
     body {
       font-family: var(--font-inter), sans-serif;
     }
+  }
+
+  @keyframes slider {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-slider {
+    display: flex;
+    width: max-content;
+    animation: slider 20s linear infinite;
+  }
+
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
   }
 }
