@@ -1,8 +1,12 @@
 import React from "react";
 import { Metadata } from "next";
-import { Lock, Database, User, CloudUpload, ScanFace } from "lucide-react";
 import CardBanner from "@/components/common/cardBanner";
-import ArrowUpRight from "@/components/common/iconUpRight"
+import ArrowUpRight from "@/components/common/iconUpRight";
+import Icon1 from "@/picture/majesticons_lock-line.png";
+import Icon2 from "@/picture/majesticons_lock-line (2).png";
+import Icon3 from "@/picture/majesticons_lock-line (3).png";
+import Icon4 from "@/picture/majesticons_lock-line (4).png";
+import Icon5 from "@/picture/majesticons_lock-line (5).png";
 
 
 export const metadata: Metadata = {
@@ -30,7 +34,7 @@ export default function PrivacyPage() {
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <Lock className="w-6 h-6 text-primary" />
+                                <img src={Icon1.src} alt="" className="w-[24px] h-auto"/>
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">
@@ -45,7 +49,7 @@ export default function PrivacyPage() {
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <Database className="w-6 h-6 text-primary" />
+                                 <img src={Icon2.src} alt="" className="w-[24px] h-auto"/>
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">
@@ -60,7 +64,7 @@ export default function PrivacyPage() {
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <CloudUpload className="w-6 h-6 text-primary" />
+                                 <img src={Icon3.src} alt="" className="w-[24px] h-auto"/>
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">
@@ -76,7 +80,7 @@ export default function PrivacyPage() {
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <User className="w-6 h-6 text-primary" />
+                                 <img src={Icon4.src} alt="" className="w-[24px] h-auto"/>
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">
@@ -94,7 +98,7 @@ export default function PrivacyPage() {
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <ScanFace className="w-6 h-6 text-primary" />
+                                 <img src={Icon5.src} alt="" className="w-[24px] h-auto"/>
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">
@@ -120,7 +124,7 @@ export default function PrivacyPage() {
                     kami. Tim kami siap memberikan penjelasan secara jelas dan responsif.
                 </p>
 
-                <button className="mx-auto flex gap-[8px] bg-primary px-[18px] py-[10px] text-background font-semibold text-[16px] leading-[24px] rounded-[8px]">
+                <button className="mx-auto flex gap-[8px] bg-primary px-[18px] py-[10px] text-background font-semibold text-[16px] leading-[24px] rounded-[8px]  hover:bg-hover transition-all duration-200">
                     Hubungi CS <ArrowUpRight/>
                     <span></span>
                 </button>

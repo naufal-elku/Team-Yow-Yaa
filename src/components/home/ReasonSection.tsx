@@ -14,43 +14,43 @@ export default function ourStrengths() {
             <p className='mx-auto font-normal text-[18px] md:text-[20px] text-font-secondary max-w-[792px]'>Solusi absensi modern yang hemat waktu, efisien, dan siap mendukung produktivitas tim Anda.</p>
         </div>
 
-        <div className='max-w-[1200px] mx-auto flex flex-wrap gap-[24px] justify-center items-center'>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+        <div className='w-full max-w-[1200px] mx-auto flex flex-wrap gap-[24px] justify-center items-center'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature1.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Teknologi berbasis GPS</p>
                     <p className='text-[16px] font-normal text-font-secondary'>GPS (Global Positioning System) memungkinkan perusahaan Anda untuk mencatat banyak titik kehadiran setiap karyawan.</p>
                 </div>
             </div>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature2.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Fleksibel</p>
                     <p className='text-[16px] font-normal text-font-secondary'>Anda punya kebijakan absen yang berbeda-beda untuk setiap divisi? Presensi dapat mengatur berdasarkan grup dan pengaturan dengan mudah.</p>
                 </div>
             </div>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature3.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Meminimalisir Kecurangan</p>
                     <p className='text-[16px] font-normal text-font-secondary'>Semua data absensi karyawan akan tersimpan secara digital dan terenkripsi secara otomatis di sistem cloud kami, sehingga meminimalisir kecurangan dan manipulasi data.</p>
                 </div>  
             </div>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature4.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Fleksibel Untuk Karyawan Seles</p>
                     <p className='text-[16px] font-normal text-font-secondary'>Presensi memungkinkan untuk mencatat dan memantau banyak titik kunjungan kehadiran bagi karyawan lapangan/sales, sesuai dengan lokasi yang telah ditentukan sebelumnya.</p>
                 </div>
             </div>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature5.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Lebih Praktis</p>
                     <p className='text-[16px] font-normal text-font-secondary'>Karyawan tidak perlu lagi mengantri/menggunakan mesin absensi konvensional, karyawan dapat melakukan absensi langsung melalui smartphone mereka masing-masing</p>
                 </div>
             </div>
-            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-[0_6px_15px_-6px_rgba(0,0,0,0.9)]'>
+            <div className='w-full md:max-w-[384px] flex flex-col gap-[24px] text-center p-[16px] bg-background rounded-[12px] transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg'>
                 <img src={Feature6.src} alt="" className='max-w-[48px] h-auto mx-auto'/>
                 <div className='flex flex-col text-center gap-[8px]'>
                     <p className='font-medium text-[20px] text-font-primary'>Rekap Absensi Yang Baik</p>

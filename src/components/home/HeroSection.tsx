@@ -1,6 +1,6 @@
 import React from 'react'
 import CardBanner from '../common/cardBanner'
-import Baground from '@/picture/Image.png'
+import Baground from '@/picture/backround.png'
 import { RocketIcon } from '../icon/rocet'
 
 export default function hero() {
