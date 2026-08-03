@@ -30,7 +30,7 @@ export default function infiniteScroll() {
   ];
 
   return (
-    <section className="overflow-hidden max-w-[350px] md:max-w-[1200px] pt-[64px] pb-[48px] md:py-[96px] mx-auto flex flex-col gap-[40px] t-0">
+    <section className="overflow-hidden max-w-[1200px] pt-[64px] pb-[48px] md:py-[96px] mx-auto flex flex-col gap-[40px] t-0 md:px-[120px] px-[20px]">
       <p className="text-font-primary text-[14px] md:text-[16px] font-medium mx-auto">Digunakan Oleh lebih dari 10.000+ bisnis di Indonesia</p>
 
       <div className="overflow-hidden marquee-mask">
