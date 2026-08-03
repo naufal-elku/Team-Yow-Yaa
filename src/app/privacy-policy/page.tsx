@@ -120,7 +120,7 @@ export default function PrivacyPage() {
                     kami. Tim kami siap memberikan penjelasan secara jelas dan responsif.
                 </p>
 
-                <button className="mx-auto flex gap-[8px] bg-primary px-[18px] py-[10px] text-background font-semibold text-[16px] leading-[24px] rounded-[8px]">
+                <button className="mx-auto flex gap-[8px] bg-primary px-[18px] py-[10px] text-background font-semibold text-[16px] leading-[24px] rounded-[8px]  hover:bg-hover transition-all duration-200">
                     Hubungi CS <ArrowUpRight/>
                     <span></span>
                 </button>
