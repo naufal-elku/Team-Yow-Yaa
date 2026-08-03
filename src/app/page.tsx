@@ -1,8 +1,11 @@
 import Image from "next/image";
-import Hero from "@/components/home/hero";
-import InfiniteScroll from "@/components/home/infiniteScroll";
-import OurStrengths from "@/components/home/ourStrengths";
-import ButtonDemo from "@/components/home/buttonDemo";
+import Hero from "@/components/home/HeroSection";
+import InfiniteScroll from "@/components/home/CompaniesSection";
+import OurStrengths from "@/components/home/ReasonSection";
+import ButtonDemo from "@/components/home/CTASection";
+import Faq from "@/components/home/faq";
+import ProductStatistics from "@/components/home/ProductStatistics";
+import CTA2Section from "@/components/home/CTA2Section";
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <InfiniteScroll />
       <OurStrengths />
       <ButtonDemo />
+      <ProductStatistics />
+      <Faq />
+      <CTA2Section />
     </>
   );
 }
