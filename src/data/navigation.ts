@@ -56,7 +56,13 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
 ];
 
 export const NAV_LINKS = {
-  login : "/login",
-  demo : "/login-demo",
-} as const ;
+  login: "/login",
+  demo: "/login-demo",
+} as const;
 
+export const SOSIAL_LINKS = {
+  instagram: "https://instagram.com/presensi.id",
+  facebook: "https://facebook.com/presensi.id",
+  youtube: "https://youtube.com/presensi.id",
+  tiktok: "https://tiktok.com/presensi.id",
+} as const;

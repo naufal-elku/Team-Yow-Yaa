@@ -21,8 +21,8 @@ export const AppStoreBadges: React.FC<BadgeProps> = ({
         className="inline-block hover:opacity-90 transition-opacity"
       >
         <svg
-          width="160"
-          height="48"
+          width="135"
+          height="40"
           viewBox="0 0 135 40"
           className="h-12 w-auto"
         >
@@ -197,9 +197,9 @@ export const AppStoreBadges: React.FC<BadgeProps> = ({
         className="inline-block hover:opacity-90 transition-opacity"
       >
         <svg
-          width="160"
-          height="48"
-          viewBox="0 0 120 40"
+          width="135"
+          height="40"
+          viewBox="0 0 135 40"
           className="h-12 w-auto"
         >
 <g clipPath="url(#clip0_194_354)">
