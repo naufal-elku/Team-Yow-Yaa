@@ -6,6 +6,7 @@ import check from "@/picture/check.png";
 import basic from "@/picture/basic.png";
 import { PricingCard } from '@/components/common/PricingCard';
 import { PRICING_PLANS } from '@/data/pricing';
+import CTA2Section from "@/components/home/CTA2Section";
 
 
 export default function PricePage() {
@@ -22,14 +23,15 @@ export default function PricePage() {
         </div>
       </CardBanner>
 
-      <section className='w-full items-start flex flex-wrap mx-auto max-w-[1440px] pt-10 pb-24 md:px-[120px] gap-[10px] justify-start px-4 lg:px-[120px]'>
-        <div className='grid grid-cols-3 flex flex-wrap max-w-[1200px] gap-6 justify-start'>
-
-         {PRICING_PLANS.map((plan) => (
+      <section className="w-full flex justify-center pt-[40px] pb-[96px] px-4 md:px-8 xl:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1200px]">
+          {PRICING_PLANS.map((plan) => (
             <PricingCard key={plan.id} plan={plan} />
           ))}
         </div>
       </section>
+
+      <CTA2Section/>
     </div>
   )
 }
