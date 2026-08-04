@@ -6,6 +6,7 @@ import ButtonDemo from "@/components/home/CTASection";
 import Faq from "@/components/home/FAQPage";
 import ProductStatistics from "@/components/home/ProductStatistics";
 import CTA2Section from "@/components/home/CTA2Section";
+import PricePage from "@/components/home/Price";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <InfiniteScroll />
       <OurStrengths />
       <ButtonDemo />
+      <PricePage />
       <ProductStatistics />
       <Faq />
       <CTA2Section />
