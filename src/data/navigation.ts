@@ -43,7 +43,7 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
         description: "Tim kami siap membantu.",
       },
       {
-        href: "/tutorial",
+        href: "/about",
         label: "Video Tutorial",
         description: "Panduan penggunaan aplikasi.",
       },
