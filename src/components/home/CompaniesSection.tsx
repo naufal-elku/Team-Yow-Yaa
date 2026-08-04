@@ -30,33 +30,35 @@ export default function infiniteScroll() {
   ];
 
   return (
-    <section className="overflow-hidden max-w-[1200px] pt-[64px] pb-[48px] md:py-[96px] mx-auto flex flex-col gap-[40px] t-0 px-[20px]">
-      <p className="text-font-primary text-[14px] md:text-[16px] font-medium mx-auto">Digunakan Oleh lebih dari 10.000+ bisnis di Indonesia</p>
+    <section className="t-0 mx-auto flex max-w-300 flex-col gap-10 overflow-hidden px-5 pt-16 pb-12 md:py-24">
+      <p className="text-font-primary mx-auto text-[14px] font-medium md:text-[16px]">
+        Digunakan Oleh lebih dari 10.000+ bisnis di Indonesia
+      </p>
 
       <div className="overflow-hidden">
         <div className="animate-slider hover:[animation-play-state:paused]">
-        <div className="flex gap-[16px] md:gap-[48px] shrink-0">
-          {logo.map((src, index) => (
-            <img 
-              key={index}
-              src={src}
-              alt={`logo ${index}`}
-              className="md:max-w-[180px] max-w-[120px] max-h-[32px] md:max-h-[56px]"
-            />
-          ))}
-        </div>
+          <div className="flex shrink-0 gap-4 md:gap-12">
+            {logo.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`logo ${index}`}
+                className="max-h-8 max-w-30 md:max-h-14 md:max-w-45"
+              />
+            ))}
+          </div>
 
-        <div aria-hidden="true" className="flex gap-[16px] md:gap-[48px] shrink-0">
-          {logo.map((src, index) => (
-            <img
-              key={`dup-${index}`}
-              src={src} 
-              alt={`logo ${index}`}
-              className="md:max-w-[180px] max-w-[120px] max-h-[32px] md:max-h-[56px]"
-            />
-          ))}
+          <div aria-hidden="true" className="flex shrink-0 gap-4 md:gap-12">
+            {logo.map((src, index) => (
+              <img
+                key={`dup-${index}`}
+                src={src}
+                alt={`logo ${index}`}
+                className="max-h-8 max-w-30 md:max-h-14 md:max-w-45"
+              />
+            ))}
+          </div>
         </div>
-      </div>
       </div>
     </section>
   );

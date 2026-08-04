@@ -3,7 +3,7 @@ import Hero from "@/components/home/HeroSection";
 import InfiniteScroll from "@/components/home/CompaniesSection";
 import OurStrengths from "@/components/home/ReasonSection";
 import ButtonDemo from "@/components/home/CTASection";
-import Faq from "@/components/home/faq";
+import Faq from "@/components/home/FAQPage";
 import ProductStatistics from "@/components/home/ProductStatistics";
 import CTA2Section from "@/components/home/CTA2Section";
 

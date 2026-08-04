@@ -1,16 +1,18 @@
 import React from "react";
 
 interface cardBanner {
-    children: React.ReactNode;
-    className ?: string;
+  children: React.ReactNode;
+  className?: string;
 }
 
-export default function cardBanner({children, className = ""}: cardBanner) {
-   return (
-     <section className="w-full px-6">
-      <div className={`mx-auto w-full text-center max-w-[1392px] pt-[24px] pb-[40px] md:py-[96px] px-6 bg-gradient-to-t from-background to-foreground rounded-[16px] ${className}`}>
+export default function cardBanner({ children, className = "" }: cardBanner) {
+  return (
+    <section className="w-full px-6">
+      <div
+        className={`from-background to-foreground mx-auto w-full max-w-348 rounded-2xl bg-linear-to-t px-6 pt-6 pb-10 text-center md:py-24 ${className}`}
+      >
         {children}
       </div>
     </section>
-   );
+  );
 }
