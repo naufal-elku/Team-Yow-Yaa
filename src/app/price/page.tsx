@@ -11,7 +11,7 @@ import CTA2Section from "@/components/home/CTA2Section";
 
 export default function PricePage() {
   return (
-    <div className="flex flex-col w-full items-center justify-between mx-auto max-w-348 bg-background">
+    <div className="">
       <CardBanner>
         <div className="flex flex-col items-center justify-center w-full max-w-198 mx-auto gap-4 text-center">
           <h1 className="text-[36px] font-semibold tracking-tight leading-snug text-font-primary">
@@ -23,15 +23,14 @@ export default function PricePage() {
         </div>
       </CardBanner>
 
-      <section className="w-full flex justify-center pt-[40px] pb-[96px] px-4 md:px-8 xl:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1200px]">
+      <section className="w-full flex justify-center pt-10 pb-24 px-4 md:px-8 xl:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-300">
           {PRICING_PLANS.map((plan) => (
             <PricingCard key={plan.id} plan={plan} />
           ))}
         </div>
       </section>
-
-      <CTA2Section/>
+     <CTA2Section/> 
     </div>
   )
 }
