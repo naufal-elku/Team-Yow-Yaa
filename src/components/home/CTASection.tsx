@@ -1,15 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export default function buttonDemo() {
   return (
-    <section className="w-full mt-[64px] md:mt-[96px]">
-        <div className='flex flex-col gap-[40px] py-[48px] md:py-[96px] px-[20px] md:px-[120px] bg-foreground text-center'>
-            <div className='flex flex-col gap-[16px] md:max-w-[792px] mx-auto'>
-                <h4 className='text-[32px] md:text-[36px] text-font-primary font-semibold'>Siap Tingkatkan Efisiensi Absensi di Perusahaan Anda?</h4>
-                <p className='text-[18px] md:text-[20px] font-normal text-font-secondary'>Jadwalkan demo dan konsultasi gratis bersama tim Presensi.co.id</p>
-            </div>
-            <a href="#" className='hover:bg-hover transition-all duration-300 bg-primary text-[16px] font-semibold px-[20px] py-[12px] rounded-[8px] w-fit mx-auto text-background'>Jadwalkan Demo Sekarang</a>
+    <section className="mt-16 w-full md:mt-24">
+      <div className="bg-foreground flex flex-col gap-10 px-5 py-12 text-center md:px-30 md:py-24">
+        <div className="mx-auto flex flex-col gap-4 md:max-w-198">
+          <h4 className="text-font-primary text-[32px] font-semibold md:text-[36px]">
+            Siap Tingkatkan Efisiensi Absensi di Perusahaan Anda?
+          </h4>
+          <p className="text-font-secondary text-[18px] font-normal md:text-[20px]">
+            Jadwalkan demo dan konsultasi gratis bersama tim Presensi.co.id
+          </p>
         </div>
+        <a
+          href="#"
+          className="hover:bg-hover bg-primary text-background mx-auto w-fit rounded-lg px-5 py-3 text-[16px] font-semibold transition-all duration-300"
+        >
+          Jadwalkan Demo Sekarang
+        </a>
+      </div>
     </section>
-  )
+  );
 }

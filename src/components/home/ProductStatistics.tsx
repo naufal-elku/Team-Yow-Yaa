@@ -1,17 +1,24 @@
-import React from 'react'
-import Statics from "@/picture/productStatics.png"
+import React from "react";
+import Statics from "@/picture/productStatics.png";
 
 export default function ProductStatistics() {
   return (
-    <section className='w-full px-[20px] md:px-[120px] py-[80px]'>
-        <div className='flex flex-wrap gap-[33px] justify-center items-center'>
-            <h4 className='text-font-secondary text-[24px] md:text-[32px] font-semibold w-full md:max-w-[714px]'>Lebih dari <span className='text-font-primary'>8 Tahun Presensi</span> Mendampingi <span className='text-primary'>Puluhan Ribu Perusahaan</span> di Indonesia <span className='text-font-primary'>Menyederhanakan Pengelolaan Kehadiran Karyawan</span> 
-            </h4>
+    <section className="w-full px-5 py-20 md:px-30">
+      <div className="flex flex-wrap items-center justify-center gap-8.25">
+        <h4 className="text-font-secondary w-full text-[24px] font-semibold md:max-w-178.5 md:text-[32px]">
+          Lebih dari <span className="text-font-primary">8 Tahun Presensi</span>{" "}
+          Mendampingi{" "}
+          <span className="text-primary">Puluhan Ribu Perusahaan</span> di
+          Indonesia{" "}
+          <span className="text-font-primary">
+            Menyederhanakan Pengelolaan Kehadiran Karyawan
+          </span>
+        </h4>
 
-            <div>
-                <img src={Statics.src} alt="" className='w-auto h-[110px] md:h-[120px]'/>
-            </div>
+        <div>
+          <img src={Statics.src} alt="" className="h-27.5 w-auto md:h-30" />
         </div>
+      </div>
     </section>
-  )
+  );
 }

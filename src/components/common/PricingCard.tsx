@@ -9,7 +9,7 @@ interface PricingCardProps {
 
 export const PricingCard = ({ plan }: PricingCardProps) => {
     return (
-        <div className='w-full flex flex-col max-w-[384px] rounded-xl bg-background border border-border-btn hover:shadow-xl transition-all duration-300 cursor-pointer'>
+        <div className='w-full flex flex-col max-w-[384px] mx-auto rounded-xl bg-background border border-border-btn hover:shadow-xl transition-all duration-300 cursor-pointer '>
 
             <div className='flex flex-col pt-10 px-8 gap-4 '>
                 <div className='flex flex-wrap gap-2 w-full items-center'>
@@ -45,7 +45,7 @@ export const PricingCard = ({ plan }: PricingCardProps) => {
                                     className='w-6 h-6 shrink-0'
                                     />
                                     <span 
-                                    className={`font-normal text-[16px] leading-6
+                                    className={`font-normal text-[16px] leading-6 
                                         ${feature.isAvailable
                                             ? "text-font-secondary"
                                             : "line-through text-[#B6B6B6]"
