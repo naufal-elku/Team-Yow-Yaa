@@ -14,7 +14,11 @@
   --color-bg-blue-secondary: #C8E5FF;
   --color-border-btn: #E9E9E9;
   --color-bg-tabel: #f9f9f9;
-  --color-about: #006BA8
+  --color-about: #006BA8;
+  --color-history: #394857;
+  --color-timeline: #F7F8FA;
+  --font-montserrat: var(--font-montserrat);
+  
 }
 
 @layer base {

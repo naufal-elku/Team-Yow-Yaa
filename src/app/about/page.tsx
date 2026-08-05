@@ -4,6 +4,9 @@ import Rectangle from "@/picture/Rectangle.png"
 import Image from "next/image"
 import { LogoWhite, Quote } from "@/components/icon/about"
 import About2 from "./about2"
+import Timeline from "./timeline"
+import History from "./history"
+import CTA2Section from "@/components/home/CTA2Section"
 
 export default function AboutPage () {
     return (
@@ -13,7 +16,7 @@ export default function AboutPage () {
                 <h2 className="text-[36px] font-semibold leading-[44px] tracking-[-0.02em] text-font-primary">
                     Tentang Kami
                 </h2>
-                <p className="text-[20px] leading-7.5 text-center text-font-secondary">
+                <p className="text-[20px] leading-7.5 text-center text-font-secondary font-montserrat">
                     Dengan mengutamakan kualitas, inovasi, dan kepercayaan, kami terus berkembang untuk menghadirkan solusi yang memberikan pengalaman terbaik
                 </p>
                 </div>
@@ -25,7 +28,7 @@ export default function AboutPage () {
                         <div>
                            <Quote />
 
-                       <div className="mt-6 space-y-8 max-w-[380px]">
+                       <div className="mt-6 space-y-8 max-w-[380px] font-montserrat">
                         <p className="text-[18px] leading-6.5 font-normal text-font-secondary ">
                             Tingginya tuntutan akan efisiensi dan fleksibilitas
                             kerja di tengah laju digitalisasi menjadi pemicu utama kami dalam menghadirkan solusi manajemen tenaga kerja yang adaptif.
@@ -47,12 +50,12 @@ export default function AboutPage () {
 />
                 </div>
                 {/* Kanan */}
-    <div className="w-full max-w-[786px] rounded-2xl bg-about p-[60px] flex flex-col gap-10">
+    <div className="w-full max-w-[786px] rounded-2xl bg-about p-8 lg:p-[60px] flex flex-col gap-10">
       <div className="flex justify-end">
        <LogoWhite />
       </div>
 
-      <div className="max-w-full space-y-8 text-[18px] leading-[26px] font-normal text-background">
+      <div className="max-w-full space-y-8 text-[18px] leading-[26px] font-normal text-background font-montserrat">
         <p>
             Presensi hadir sebagai platform dan ekosistem cerdas yang dirancang
             untuk mengelola tenaga kerja secara menyeluruh. Kami menyediakan
@@ -78,6 +81,12 @@ export default function AboutPage () {
     </div>
             </section>
 <About2/>
+<section>
+        <Timeline/>
+</section>
+
+<History/>
+<CTA2Section/>
         </div>
     )
 }
