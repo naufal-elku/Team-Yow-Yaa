@@ -21,7 +21,7 @@ export default function BlogPage() {
       </CardBanner>
 
       <section className="flex flex-col justify-center w-full max-w-360 mx-auto px-6 gap-20 pt-10 pb-14 md:px-8 xl:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-300 mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-6 w-full max-w-300 mx-auto px-4">
             {BLOG_POSTS.map((post) => (
               <BlogCard key={post.id} post={post} />
             ))}
