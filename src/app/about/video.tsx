@@ -9,7 +9,7 @@ const videoList = [
 export default function Video() {
   return (
     <section className="font-montserrat">
-      <div className="py-20 px-6 md:px-12 lg:px-[120px] max-w-[1440px] mx-auto">
+      <div className="py-20 px-[20px] md:px-12 lg:px-[120px] max-w-[1440px] mx-auto">
         <h2 className="font-bold text-[32px] leading-10 text-center mb-[32px] md:mb-[64px]">
           Kenali Presensi Lebih Dekat Melalui Video
         </h2>

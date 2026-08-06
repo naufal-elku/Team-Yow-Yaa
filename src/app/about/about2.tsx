@@ -4,7 +4,7 @@ import About from "@/picture/about2.png"
 export default function About2 () {
     return (
         
-            <section className="mx-auto max-w-[1392px] px-6 py-24">
+            <section className="mx-auto max-w-[1392px] px-[20px] lg:px-[120px] py-24">
   <div className="grid grid-cols-1 lg:grid-cols-[1fr_450px] gap-20 items-start">
 
     {/* Kiri */}

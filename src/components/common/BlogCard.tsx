@@ -21,7 +21,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
 
                     <div className="flex w-full gap-[6px]">
                         <a
-                            href={`${post.slug}`}
+                            href={`/blog/${post.slug}`}
                             className="inline-flex items-center gap-1.5 text-[14px] leading-[20px] font-semibold text-[#057CE4] whitespace-nowrap w-fit cursor-pointer"
                         >
                             <span>Baca selengkapnya</span>

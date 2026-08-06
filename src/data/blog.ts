@@ -19,6 +19,7 @@ export const BLOG_POSTS: BlogPost[] = [
         description: "Telat membayar gaji karyawan berdampak besar bagi perusahaan. Pelajari dampak dan cara mengatasi telat membayar gaji karyawan di sini agar bisnis tetap sehat dan karyawan tetap loyal!",
         image: image.src,
         slug: "Sering-Telat-Membayar-Gaji-Karyawan"
+        
     },
     {
         id: "2",

@@ -3,7 +3,7 @@ import { Building2, User } from 'lucide-react';
 export default function History() {
   return (
     <section className="font-montserrat">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-6 py-20 lg:flex-row lg:items-center lg:px-[120px]">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-8 px-[20px] py-20 lg:flex-row lg:items-center lg:px-[120px]">
         {/* Kiri: Teks Utama */}
         <div className="max-w-[714px]">
           <h2 className="text-[32px] font-semibold leading-10 text-history">

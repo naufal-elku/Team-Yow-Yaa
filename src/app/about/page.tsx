@@ -22,7 +22,7 @@ export default function AboutPage () {
                 </p>
                 </div>
             </CardBanner>
-            <section className="mx-auto w-full max-w-[1392px] px-6 py-24">
+            <section className="mx-auto w-full max-w-[1392px] px-[20px] lg:px-[120px] py-24">
                 {/* atas */}
                 <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-16 items-start">
                     <div className="max-w-[400px]">
