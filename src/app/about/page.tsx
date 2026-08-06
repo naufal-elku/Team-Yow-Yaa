@@ -13,7 +13,7 @@ export default function AboutPage () {
     return (
         <div>
             <CardBanner>
-                <div className="mx-auto w-full max-w-[792px] h-[120px] flex flex-col items-center gap-4 text-center">
+                <div className="mx-auto w-full max-w-[792px] h-[120px] flex flex-col items-center gap-4 text-center mb-[48px]">
                 <h2 className="text-[36px] font-semibold leading-[44px] tracking-[-0.02em] text-font-primary">
                     Tentang Kami
                 </h2>

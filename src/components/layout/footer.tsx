@@ -237,7 +237,7 @@ export default function Footer() {
 
       {/* Bottom */}
       <div className="bg-[#F9F9F9]">
-        <div className="mx-auto max-w-[1200px] h-20 px-6 lg:px-0 flex flex-col md:flex-row items-center justify-between">
+        <div className="mx-auto max-w-[1200px] min-h-20 py-6 md:py-0 px-6 lg:px-0 flex flex-col-reverse md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
             © 2026. All rights reserved. Copyright Presensi.co.id
           </p>
