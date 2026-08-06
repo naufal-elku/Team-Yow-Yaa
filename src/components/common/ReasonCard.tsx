@@ -7,7 +7,7 @@ interface ReasonTypeProps {
 
 export const ReasonCard = ({reason}: ReasonTypeProps) => {
   return (
-        <div className="bg-background flex flex-col gap-6 rounded-xl lg:p-4 py-[17px] text-center transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg md:max-w-[384px]">
+        <div className="bg-background flex flex-col gap-6 rounded-xl p-4 text-center transition-transform duration-300 ease-in-out hover:scale-102 hover:shadow-lg ">
           <img
             src={reason.Icon}
             alt={reason.Title}

@@ -21,7 +21,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <header className="fixed left-0 top-0 w-full h-20 border-b border-gray-200 bg-white z-50">
-      <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-[10px] px-6 md:px-10 lg:px-[120px] py-[18px]">
+      <nav className="mx-auto flex h-full max-w-[1440px] items-center justify-between gap-[10px] px-5 md:px-10 lg:px-[120px] py-[18px]">
         {/* Logo */}
         <div className="flex items-center gap-6">
           <Link href="/">
