@@ -7,6 +7,7 @@ import About2 from "./about2"
 import Timeline from "./timeline"
 import History from "./history"
 import CTA2Section from "@/components/home/CTA2Section"
+import Video from "./video"
 
 export default function AboutPage () {
     return (
@@ -86,6 +87,9 @@ export default function AboutPage () {
 </section>
 
 <History/>
+
+<Video/>
+
 <CTA2Section/>
         </div>
     )
