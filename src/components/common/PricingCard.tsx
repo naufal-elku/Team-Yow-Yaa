@@ -28,7 +28,7 @@ export const PricingCard = ({ plan }: PricingCardProps) => {
                     </div>
 
                     <div className='flex flex-col w-full gap-3  mt-4'>
-                        <button className='w-full flex items-center justify-center py-3 px-5 rounded-lg border border-primary bg-[#F6FBFF] gap-2 hover:bg-blue-100 transition-colors'>
+                        <button className='w-full flex items-center justify-center py-3 px-5 rounded-lg border border-primary bg-[#F6FBFF] gap-2 hover:bg-blue-50 transition-colors'>
                             <span className='font-semibold text-[16px] text-primary leading-6'>
                                 {plan.buttonText}
                             </span>
