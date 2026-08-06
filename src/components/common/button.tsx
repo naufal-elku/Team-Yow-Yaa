@@ -1,1 +1,0 @@
-//membuat tombol yang tampil di semua halaman

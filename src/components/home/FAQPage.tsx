@@ -18,10 +18,10 @@ export default function FaqPage() {
   return (
     <section className="w-full pt-24">
       <div className="mx-auto max-w-198 text-center">
-        <h2 className="text-font-primary mx-auto text-[32px] leading-11 font-semibold lg:text-[36px]">
+        <h2 className="text-font-primary mx-auto text-[32px] leading-10 lg:leading-11 font-semibold lg:text-[36px] lg:tracking-[-0.02em]">
           Pertanyaan yang Sering Ditanyakan
         </h2>
-        <p className="text-font-secondary mx-auto mt-4 text-[18px] font-normal lg:text-[20px]">
+        <p className="text-font-secondary mx-auto mt-4 text-[18px] font-normal lg:text-[20px] leading-[26px] lg:leading-7.5">
           Temukan jawaban atas pertanyaan umum seputar fitur, cara kerja, hingga
           informasi biaya penggunaan Presensi
         </p>
@@ -43,7 +43,7 @@ export default function FaqPage() {
             >
               <span
                 className={
-                  "text-font-primary text-[18px] font-semibold transition-colors md:text-[18px]"
+                  "text-font-primary text-[18px] font-semibold transition-colors md:text-[18px] leading-7"
                 }
               >
                 {faq.question}
