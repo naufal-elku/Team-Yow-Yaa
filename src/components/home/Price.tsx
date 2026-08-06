@@ -18,8 +18,8 @@ export default function PricePage() {
                     </p>
                 </div>
 
-                <button className="flex items-center justify-center w-[120px] rounded-[8px] border border-[#E9E9E9] bg-[#F7F8FA] px-[20px] py-[12px] shrink-0">
-                    <span className="text-[16px] font-semibold leading-[24px] text-[#535658]">Harga</span>
+                <button className="flex items-center justify-center w-30 rounded-lg border border-border-btn bg-timeline px-5 py-3 shrink-0">
+                    <span className="text-[16px] font-semibold leading-6 text-font-secondary">Harga</span>
                     <img src={descending.src} alt="" className="w-5 h-5"/>
                 </button>
 

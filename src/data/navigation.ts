@@ -33,7 +33,7 @@ export const PRIMARY_NAV_LINKS: NavLink[] = [
         description: "Tips dan wawasan praktis.",
       },
       {
-        href: "/faq",
+        href: "/FAQ",
         label: "FAQ",
         description: "Jawaban cepat.",
       },

@@ -29,12 +29,12 @@ export default function PrivacyPage() {
             </CardBanner>
 
 
-            <section className="flex flex-col w-full max-w-5xl mx-auto px-6 gap-20 pt-10 pb-14">
-                <div className="flex flex-col items-start w-full gap-4 text-justify space-y-7">
+            <section className="flex flex-col w-full max-w-[1440px] mx-auto px-4 md:px-6 lg:px-48 gap-20 pt-10 pb-14 ">
+                <div className="flex flex-col items-start w-full gap-10 text-justify ">
                     <div className="flex flex-col ">
                         <div className="flex items-center gap-3">
                             <div className="flex items-center justify-center w-9 h-9 bg-secondary rounded-[20px] shrink-0">
-                                <img src={Icon1.src} alt="" className="w-6 h-auto"/>
+                                <img src={Icon1.src} alt="" className="w-6 h-auto "/> 
                             </div>
 
                             <h2 className="text-[24px] font-medium text-font-primary leading-8">

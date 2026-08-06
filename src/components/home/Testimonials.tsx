@@ -20,13 +20,13 @@ export default function Testimonials() {
   const last = currentIndex === Testi.length -1;
 
   return (
-    <section className="mx-auto flex w-full flex-col gap-16 px-5 py-6 lg:px-30 lg:py-24">
-      <h4 className="text-center text-[28px] font-semibold text-font-primary leading-[44px] tracking-[-0.02em] lg:text-[36px]">
+    <section className="mx-auto flex w-full flex-col gap-16 px-5 py-12 lg:px-30 lg:py-24 lg:gap-10">
+      <h4 className="text-center text-[32px] font-semibold text-font-primary leading-10 lg:leading-11 lg:tracking-[-0.02em] lg:text-[36px]">
         Apa Kata Mereka
       </h4>
 
-      <div className="relative mx-auto w-full max-w-300">
-        <div className="flex flex-col gap-8 justify-between rounded-2xl border shadow-lg border-gray-200 bg-white lg:p-6">
+      <div className="relative mx-auto w-full max-w-300 gap-10">
+        <div className="flex flex-col gap-8 justify-between rounded-2xl shadow-sm lg:shadow-lg border-gray-200 bg-white p-6">
           <div className="flex flex-col gap-4">
 
             {/* logo */}
@@ -38,7 +38,7 @@ export default function Testimonials() {
                   className="h-auto w-[180px] object-contain"
                 />
               ) : (
-                <span className="text-[20px] font-semibold text-font-primary">
+                <span className="text-[20px] font-semibold text-font-primary font-montserrat">
                   {current.companyName}
                 </span>
               )}
@@ -52,14 +52,14 @@ export default function Testimonials() {
                 />
 
             {/* isi */}
-            <p className="text-[14px] leading-[1.5em] text-font-secondary lg:text-[16px]">
+            <p className="text-[16px] leading-[1.5em] text-font-secondary lg:text-[16px]">
               {current.quote}
             </p>
             </div>
           </div>
 
           {/* profile */}
-          <div className="mt-6 flex items-center gap-3">
+          <div className="flex items-center gap-3">
             <img
               src={current.avatarProfile || "/AvatarProfile/default.png"}
               alt={current.title}
@@ -67,10 +67,10 @@ export default function Testimonials() {
             />
 
             <div className="flex flex-col">
-              <span className="font-semibold text-font-primary leading-[26px] lg:text-[18px]">
+              <span className="font-semibold text-font-primary leading-[26px] text-[18px] font-montserrat">
                 {current.title}
               </span>
-              <span className="font-normal leading-5 text-font-secondary lg:text-[14px]">
+              <span className="font-normal leading-5 text-font-secondary text-[14px] font-montserrat">
                 {current.role}
               </span>
             </div>

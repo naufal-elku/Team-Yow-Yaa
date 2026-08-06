@@ -27,7 +27,7 @@ export default function CTA2Section() {
         <img
           src={Phone.src}
           alt=""
-          className="bottom-0 mx-auto h-auto w-100 md:absolute md:right-8 md:w-77.5 lg:h-[492px] lg:w-auto"
+          className="bottom-0 mx-auto h-auto w-[393px] md:absolute md:right-8 md:w-77.5 lg:h-[492px] lg:w-auto"
         />
       </div>
     </section>

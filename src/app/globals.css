@@ -47,6 +47,6 @@
   .animate-slider {
     display: flex;
     width: max-content;
-    animation: slider 20s linear infinite;
+    animation: slider 25s linear infinite;
   }
 }

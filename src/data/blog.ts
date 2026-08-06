@@ -24,7 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
     {
         id: "2",
         date: "15 Juli 2025",
-        title: "Cara Mengatasi Kecurangan Absensi dengan Sistem Absensi Online Cara Mengatasi Kecurangan Absensi dengan Sistem Absensi Online ",
+        title: "Cara Mengatasi Kecurangan Absensi dengan Sistem Absensi Online",
         description: "Temukan cara efektif mengatasi kecurangan absensi karyawan dengan sistem absensi yang akurat dan otomatis. Tingkatkan disiplin dan produktivitas kerja secara menyeluruh.",
         image: image1.src,
         slug: "Cara-Mengatasi-Kecurangan-Absensi-dengan-Sistem-Absensi-Online "
@@ -61,4 +61,5 @@ export const BLOG_POSTS: BlogPost[] = [
         image: image2.src,
         slug: "5-rekomendasi-aplikasi-time-tracking-terbaik-2025",
     },
+    
 ]
