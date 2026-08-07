@@ -19,7 +19,7 @@ export default function BlogPage() {
           <p className="text-[20px] leading-7.5 font-normal text-font-secondary  text-center">
             Temukan berbagai artikel informatif, tips manajemen karyawan, hingga update teknologi HR yang relevan bagi perkembangan bisnis Anda.
           </p>
-          <div>
+          <div className="w-full">
             <SearchBar value={searchQuery} onChange={setSearchQuery} />
           </div>
         </div>
