@@ -8,7 +8,7 @@ interface BlogCardProps {
 
 export const BlogCard = ({ post }: BlogCardProps) => {
     return (
-        <div className="flex flex-col w-full max-w-[384px] h-134 gap-12 cursor-pointer mx-auto">
+        <div className="flex flex-col w-full max-w-[384px] gap-[24px] cursor-pointer">
             <img src={post.image} alt={post.title || "Blog thumbnail"} className="w-full object-cover rounded-xl aspect-[16/9] overflow-hidden" />
             <div className="flex flex-col w-full h-auto rounded-xl gap-4 hover:translate-x-2 hover:shadow-lg transition-all py-[12px] hover:px-[12px] duration-600 ease-in-out will-change-transform cursor-pointer transition: all 0.3s ease">
                 <div className="flex flex-col w-full gap-2 ">
