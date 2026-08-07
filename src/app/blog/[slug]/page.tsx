@@ -1,9 +1,11 @@
 import React from "react";
 import { BLOG_POSTS } from "@/data/blog";
 import { notFound } from "next/navigation";
+import { CalendarRange, Link2 } from 'lucide-react';
 import Link from "next/link";
 import { BLOG_CONTENTS } from "@/data/content";
 import { BlogCard } from "@/components/common/BlogCard";
+import { Whatsapp, Instagram, X, Facebook } from "@/components/icon/sosmed";
 
 interface DetailBlogProps {
   params: Promise<{ slug: string }>;
@@ -29,61 +31,76 @@ export default async function DetailBlogPage({ params }: DetailBlogProps) {
 
   return (
     <div className="w-full bg-background text-font-primary">
-      <div className="max-w-[1440px] mx-auto px-6 py-10">
+      <div className="max-w-[1440px] mx-auto px-[20px] lg:px-[120px] py-10">
         
-        {/* BARIS UTAMA (BREADCRUMB & DAFTAR ISI DALAM SATU GRID SEJAJAR) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+     
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
           
-          {/* SIDEBAR KIRI (3 Kolom) */}
-          <aside className="lg:col-span-3 flex flex-col gap-10">
-            {/* Daftar Isi Header & List */}
-            <div className="flex flex-col gap-4">
-              <h3 className="font-semibold text-[16px] text-[#252B2B]">
-                Daftar Isi
-              </h3>
-              <ul className="flex flex-col text-[14px] leading-relaxed border-l-2 border-[#E4E7EC]">
-                {articleContent.tableOfContents && articleContent.tableOfContents.length > 0 ? (
-                  articleContent.tableOfContents.map((toc, index) => (
-                    <li
-                      key={index}
-                      className={`pl-4 py-1.5 cursor-pointer transition-all ${
-                        index === 0
-                          ? "border-l-2 border-[#252B2B] -ml-[2px] font-semibold text-[#252B2B] bg-[#F8FAFC]"
-                          : "text-[#535658] hover:text-[#057CE4]"
-                      }`}
-                    >
-                      {toc}
-                    </li>
-                  ))
-                ) : (
-                  <li className="pl-4 py-1.5 border-l-2 border-[#252B2B] -ml-[2px] font-semibold text-[#252B2B] bg-[#F8FAFC]">
-                    Pendahuluan
-                  </li>
-                )}
-              </ul>
-            </div>
+      
+          <aside className="lg:col-span-3 flex flex-col gap-10 w-full max-w-[383px]">
+  
+                <div className="flex flex-col gap-[24px] w-full">
+                 
+                  <div className="relative pb-3 border-b border-[#E4E7EC]">
+                    <h3 className="font-semibold text-[16px] text-[#252B2B]">
+                      Daftar Isi
+                    </h3>
+                 
+                    <span className="absolute bottom-0 left-0 w-8 h-[3px] bg-[#252B2B]" />
+                  </div>
 
-            {/* Share Buttons */}
-            <div className="flex flex-col gap-3">
-              <h3 className="font-semibold text-[18px] leading-[28px]">
-                Bagikan
-              </h3>
-              <div className="flex items-center gap-[12px]">
-                <button className="w-12 h-12 rounded-full bg-[#3B5166] text-white flex items-center justify-center text-xs hover:opacity-90">🔗</button>
-                <button className="w-12 h-12 rounded-full bg-[#3B5166] text-white flex items-center justify-center text-xs hover:opacity-90">💬</button>
-                <button className="w-12 h-12 rounded-full bg-[#3B5166] text-white flex items-center justify-center text-xs hover:opacity-90">📷</button>
-                <button className="w-12 h-12 rounded-full bg-[#3B5166] text-white flex items-center justify-center text-xs hover:opacity-90">𝕏</button>
-                <button className="w-12 h-12 rounded-full bg-[#3B5166] text-white flex items-center justify-center text-xs hover:opacity-90">f</button>
+                 
+                  <ul className="flex flex-col gap-1 text-[16px] leading-[24px] font-n">
+                    {articleContent.tableOfContents && articleContent.tableOfContents.length > 0 ? (
+                      articleContent.tableOfContents.map((toc, index) => (
+                        <li
+                          key={index}
+                          className={`px-4 py-2.5 rounded-lg cursor-pointer transition-all ${
+                            index === 0
+                              ? "font-semibold text-[#252B2B] bg-[#F8FAFC]"
+                              : "text-[#535658] hover:text-[#057CE4]"
+                          }`}
+                        >
+                          {toc}
+                        </li>
+                      ))
+                    ) : (
+                      <li className="px-4 py-2.5 rounded-lg font-semibold text-[#252B2B] bg-[#F8FAFC]">
+                        Pendahuluan
+                      </li>
+                    )}
+                  </ul>
+                </div>
+
+              <div className="flex flex-col gap-3 w-full">
+                <h3 className="font-semibold text-[18px] leading-[28px] text-[#252B2B]">
+                  Bagikan
+                </h3>
+                <div className="flex items-center gap-[12px]">
+                  <button className="w-12 h-12 rounded-full bg-blog text-background flex items-center justify-center shrink-0 hover:opacity-90">
+                    <Link2 />
+                  </button>
+                  <button className="w-12 h-12 rounded-full bg-blog text-white flex items-center justify-center shrink-0 hover:opacity-90">
+                    <Whatsapp />
+                  </button>
+                  <button className="w-12 h-12 rounded-full bg-blog text-white flex items-center justify-center shrink-0 hover:opacity-90">
+                    <Instagram />
+                  </button>
+                  <button className="w-12 h-12 rounded-full bg-blog text-white flex items-center justify-center shrink-0 hover:opacity-90">
+                    <X />
+                  </button>
+                  <button className="w-12 h-12 rounded-full bg-blog text-white flex items-center justify-center shrink-0 hover:opacity-90">
+                    <Facebook />
+                  </button>
+                </div>
               </div>
-            </div>
           </aside>
 
-          {/* KONTEN KANAN (9 Kolom) */}
-          <main className="lg:col-span-9 flex flex-col gap-6">
+          <main className="w-full lg:w-[793px] min-h-[1701px] flex flex-col gap-[24px] opacity-100 rotate-0 shrink-0">
             
-            {/* Breadcrumb Navigation - Sejajar Horisontal dengan Header Daftar Isi */}
+            {/* Breadcrumb Navigation */}
             <nav className="text-[14px] text-[#5D6F80] flex items-center gap-2">
-              <Link href="/blog" className="hover:underline">
+              <Link href="/blog" className="hover:underline shrink-0">
                 Blog
               </Link>
               <span>&gt;</span>
@@ -92,17 +109,19 @@ export default async function DetailBlogPage({ params }: DetailBlogProps) {
               </span>
             </nav>
 
-            <h1 className="text-[36px] font-semibold leading-[44px] text-font-primary">
+            {/* Judul Utama Artikel */}
+            <h1 className="text-[36px] font-semibold leading-[44px] tracking-[-0.02em] text-font-primary">
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-2 text-[14px] text-font-secondary">
-              <span>📅</span>
+            {/* Tanggal Rilis */}
+            <div className="flex items-center gap-2 text-[16px] text-font-secondary">
+              <span><CalendarRange className="w-5 h-5"/></span>
               <span>{post.date}</span>
             </div>
 
-            {/* Banner Gambar */}
-            <div className="w-full h-[400px] rounded-[16px] overflow-hidden my-2">
+            {/* Banner Gambar Utama */}
+            <div className="w-full h-[529px] rounded-[12px] overflow-hidden">
               <img
                 src={post.image}
                 alt={post.title}
@@ -111,7 +130,7 @@ export default async function DetailBlogPage({ params }: DetailBlogProps) {
             </div>
 
             {/* Body Teks Paragraf */}
-            <article className="flex flex-col gap-4 text-[#535658] text-[16px] leading-[26px]">
+            <article className="w-full flex flex-col gap-4 text-[#535658] text-[16px] leading-[24px] font-normal">
               {articleContent.content?.map((paragraph, index) => (
                 <div
                   key={index}
@@ -119,12 +138,12 @@ export default async function DetailBlogPage({ params }: DetailBlogProps) {
                 />
               ))}
             </article>
+
           </main>
         </div>
 
-        {/* SEKSI BLOG TERBARU */}
-        <section className="mt-20 pt-12 border-t border-[#E4E7EC]">
-          <h2 className="text-[32px] font-semibold text-font-primary mb-8">
+        <section className="mt-20">
+          <h2 className="text-[28px] md:text-[32px] font-semibold text-font-primary mb-8">
             Blog Terbaru
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
