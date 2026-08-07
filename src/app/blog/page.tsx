@@ -25,23 +25,29 @@ export default function BlogPage() {
         </div>
       </CardBanner>
 
-      <section className="flex flex-col justify-center w-full max-w-360 mx-auto px-6 gap-20 pt-10 pb-14 md:px-8 xl:px-12">
-        {filteredPosts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-4 md:gap-6 w-full max-w-300 mx-auto px-4">
-            {filteredPosts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
+      <section className="flex flex-col justify-center w-full mx-auto px-[20px] gap-20 pt-10  lg:px-[120px] lg:pt-[40px] lg:pb-[56px]">
+        <div className="w-full flex flex-col gap-[40px] lg:gap-[48px] mx-auto max-w-[1200px] mx-auto">
+          {filteredPosts.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] w-full">
+              {filteredPosts.map((post) => (
+                <BlogCard key={post.slug} post={post} />
+              ))}
+            </div>
 
-        ) : (
+          ) : (
 
-          <div className="text-center py-16">
-            <p className="text-[18px] font-medium text-gray-600">
-              Artikel dengan kata kunci &quot;<span className="text-[#057CE4]">{searchQuery}</span>&quot; tidak ditemukan.
-            </p>
-          </div>
+            <div className="text-center py-16">
+              <p className="text-[18px] font-medium text-gray-600">
+                Artikel dengan kata kunci &quot;<span className="text-[#057CE4]">{searchQuery}</span>&quot; tidak ditemukan.
+              </p>
+            </div>
 
-        )}
+          )}
+
+          <button className="bg-background rounded-[8px] px-[18px] py-[10px] border border-foreground text-font-secondary font-semibold text-[16px] leading-[24px] w-fit mx-auto">
+              Muat lebih banyak
+          </button>
+        </div>
       </section>
     </div>
   );
