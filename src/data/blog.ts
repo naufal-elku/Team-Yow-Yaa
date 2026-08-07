@@ -43,7 +43,7 @@ export const BLOG_POSTS: BlogPost[] = [
         title: "5 Rekomendasi Aplikasi Time Tracking Terbaik 2025",
         description: "Cari rekomendasi aplikasi time tracking terbaik 2025? Temukan pilihan aplikasi yang membantu Anda mengelola waktu dengan lebih efisien dan meningkatkan produktivitas.",
         image: image2.src,
-        slug: "5-rekomendasi-aplikasi-time-tracking-terbaik-2025",
+        slug: "5-rekomendasi-aplikasi-time-tracking-terbaik-2025-1",
     },
     {
         id: "5",
@@ -51,7 +51,7 @@ export const BLOG_POSTS: BlogPost[] = [
         title: "Sering Telat Membayar Gaji Karyawan? Ini Dia Dampak dan Cara Mengatasinya! ",
         description: "Telat membayar gaji karyawan berdampak besar bagi perusahaan. Pelajari dampak dan cara mengatasi telat membayar gaji karyawan di sini agar bisnis tetap sehat dan karyawan tetap loyal!",
         image: image.src,
-        slug: "Sering-Telat-Membayar-Gaji-Karyawan"
+        slug: "Sering-Telat-Membayar-Gaji-Karyawan-1"
     },
     {
         id: "6",
@@ -59,7 +59,7 @@ export const BLOG_POSTS: BlogPost[] = [
         title: "5 Rekomendasi Aplikasi Time Tracking Terbaik 2025",
         description: "Cari rekomendasi aplikasi time tracking terbaik 2025? Temukan pilihan aplikasi yang membantu Anda mengelola waktu dengan lebih efisien dan meningkatkan produktivitas.",
         image: image2.src,
-        slug: "5-rekomendasi-aplikasi-time-tracking-terbaik-2025",
+        slug: "5-rekomendasi-aplikasi-time-tracking-terbaik-2025-2",
     },
     
 ]

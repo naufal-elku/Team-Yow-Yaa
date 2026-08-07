@@ -117,14 +117,14 @@ export default function PrivacyPage() {
 
                 </div>
             </section>
-            <div className="w-full space-y-4 px-6 mt-15 max-w-300 py-10 mx-auto my-10 bg-foreground rounded-2xl text-center items-center">
+            <div className="w-full space-y-4 px-6 mt-15 max-w-290 py-10 mx-auto my-10 bg-foreground rounded-2xl text-center items-center">
                 <h4 className="font-medium text-[20px] text-font-primary leading-7.5 ">Butuh Informasi Lebih Lanjut?</h4>
 
                 <p className="text-sm  max-w-198 mb-6 text-center mx-auto leading-relaxed font-normal text-[18px] text-font-secondary">Apabila Anda memiliki pertanyaan lebih lanjut terkait kebijakan privasi kami, silakan hubungi 
                     kami. Tim kami siap memberikan penjelasan secara jelas dan responsif.
                 </p>
 
-                <button className="mx-auto flex gap-2 bg-primary px-4.5 py-2.5 text-background font-semibold text-[16px] leading-6 rounded-2  hover:bg-hover transition-all duration-200">
+                <button className="mx-auto flex gap-2 bg-primary px-4.5 py-2.5 text-background font-semibold text-[16px] leading-6 rounded-[8px]  hover:bg-hover transition-all duration-200">
                     Hubungi CS <ArrowUpRight/>
                     <span></span>
                 </button>
