@@ -20,6 +20,7 @@ export interface PricingPlan {
     price: string;
     period: string;
     buttonText: string;
+    numericPrice: number;
     features: Feature[];
 }
 
@@ -32,6 +33,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Gratis!",
         period: "/ 2 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 0,
         features: [
             { text: "Akses Fitur Premium", isAvailable: false },
             { text: "Max. 50 Karyawan", isAvailable: true },
@@ -46,6 +48,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Gratis!",
         period: "/ 12 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 0,
         features: [
             { text: "Akses Fitur Premium", isAvailable: false },
             { text: "Max. 5 Karyawan", isAvailable: true },
@@ -60,6 +63,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 33.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 33000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 15 Karyawan", isAvailable: true },
@@ -74,6 +78,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 83.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 83000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 40 Karyawan", isAvailable: true },
@@ -88,6 +93,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 150.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 150000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 100 Karyawan", isAvailable: true },
@@ -102,6 +108,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 230.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 230000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 130 Karyawan", isAvailable: true },
@@ -116,6 +123,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 330.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 330000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 200 Karyawan", isAvailable: true },
@@ -130,6 +138,7 @@ export const PRICING_PLANS: PricingPlan[] = [
         price: "Rp 465.000",
         period: "/ 1 Bulan",
         buttonText: "Pilih Paket",
+        numericPrice: 465000,
         features: [
             { text: "Akses Fitur Premium", isAvailable: true },
             { text: "Max. 300 Karyawan", isAvailable: true },

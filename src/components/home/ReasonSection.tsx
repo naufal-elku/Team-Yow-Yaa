@@ -15,7 +15,7 @@ export default function ourStrengths() {
         </p>
         </div>
 
-        <div className="mx-auto flex w-full flex-wrap items-center justify-center gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-center">
           {Reason.map((reason) => (
             <ReasonCard key={reason.id} reason={reason} />
           ))}

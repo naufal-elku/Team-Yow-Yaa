@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { faq } from "@/data/faq";
-import FaqCs from "@/components/common/ContentFAQ";
+import FaqCs from "../../components/common/ContentFAQ";
 
 export default function FaqPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -16,22 +16,23 @@ export default function FaqPage() {
   };
 
   return (
-    <section className="w-full pt-24">
-      <div className="mx-auto max-w-198 text-center">
-        <h2 className="text-font-primary mx-auto text-[32px] leading-10 font-semibold lg:text-[36px] lg:leading-11 lg:tracking-[-0.02em]">
-          Pertanyaan yang Sering Ditanyakan
-        </h2>
-        <p className="text-font-secondary mx-auto mt-4 text-[18px] leading-[26px] font-normal lg:text-[20px] lg:leading-7.5">
-          Temukan jawaban atas pertanyaan umum seputar fitur, cara kerja, hingga
-          informasi biaya penggunaan Presensi
-        </p>
-      </div>
+    <section className="w-full pt-[48px] lg:pt-[96px]">
+        <div className="mx-auto w-full max-w-[792px] text-center">
+          <h2 className="text-font-primary mx-auto text-[32px] leading-10 font-semibold lg:text-[36px] lg:leading-11 lg:tracking-[-0.02em]">
+            Pertanyaan yang Sering Ditanyakan
+          </h2>
+          <p className="text-font-secondary mx-auto mt-4 px-5 text-[18px] leading-[26px] font-normal lg:text-[20px] lg:leading-7.5">
+            Temukan jawaban atas pertanyaan umum seputar fitur, cara kerja,
+            hingga informasi biaya penggunaan Presensi
+          </p>
+        </div>
 
-      <div className="mx-auto mt-12 flex w-full max-w-198 flex-col gap-8">
+      <div className="flex w-full flex-col gap-[64px] px-[20px] py-[48px] lg:gap-20 lg:px-[120px] lg:pt-[40px] lg:pb-[56px]">
+        <div className="mx-auto flex w-full max-w-[792px] flex-col gap-8">
         {faq.map((faq, index) => (
           <div
             key={faq.id}
-            className={`rounded-xl p-5 transition-all duration-400 ${
+            className={`w-full rounded-xl p-5 transition-all duration-400 ${
               activeIndex
                 ? "bg-white shadow-[0_8px_4px_-8px_rgba(0,0,0,0.2)]"
                 : "bg-white shadow-[0_8px_4px_-8px_rgba(0,0,0,0.2)]"
@@ -41,11 +42,7 @@ export default function FaqPage() {
               onClick={() => handleToggle(index)}
               className="flex w-full cursor-pointer items-center justify-between gap-4 text-left"
             >
-              <span
-                className={
-                  "text-font-primary text-[18px] leading-7 font-semibold transition-colors md:text-[18px]"
-                }
-              >
+              <span className="text-font-primary flex-1 text-[18px] leading-7 font-semibold transition-colors md:text-[18px]">
                 {faq.question}
               </span>
 
@@ -61,15 +58,16 @@ export default function FaqPage() {
             </button>
 
             {activeIndex === index && (
-              <div className="text-font-secondary animate-fadeIn mt-3 max-w-250 border-t border-gray-200/60 pt-3 text-[16px] leading-6 font-normal">
+              <div className="text-font-secondary animate-fadeIn mt-3 w-full border-t border-gray-200/60 pt-3 text-[16px] leading-6 font-normal">
                 {faq.answer}
               </div>
             )}
           </div>
         ))}
-      </div>
+        </div>
 
-      <FaqCs></FaqCs>
+         <FaqCs />
+      </div>
     </section>
   );
 }

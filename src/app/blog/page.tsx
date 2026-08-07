@@ -8,7 +8,7 @@ import { BlogCard } from "@/components/common/BlogCard";
 export default function BlogPage() {
   return (
     <div>
-      <CardBanner>
+      <CardBanner className='lg:pb-[96px]'>
         <div className="flex flex-col items-center justify-center w-full max-w-198 mx-auto gap-4 text-center ">
           <h1 className="text-[36px] font-semibold tracking-tight leading-snug text-font-primary">
             Blog & Insight Presensi.co.id

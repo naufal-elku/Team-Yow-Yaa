@@ -7,9 +7,9 @@ interface cardCs {
 
 export default function cardCs({ children, className }: cardCs) {
   return (
-    <section className="mt-20 w-full px-6">
+    <section className="">
       <div
-        className={`bg-foreground mx-auto my-10 w-full max-w-300 rounded-2xl py-10 text-center ${className}`}
+        className={`bg-foreground mx-auto w-full max-w-300 rounded-2xl px-[32px] py-[40px] text-center ${className}`}
       >
         {children}
       </div>

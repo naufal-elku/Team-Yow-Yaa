@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "@/components/home/HeroSection";
 import InfiniteScroll from "@/components/home/CompaniesSection";
-import OurStrengths from "@/components/home/ReasonSection";
+import Reason from "@/components/home/ReasonSection";
 import ButtonDemo from "@/components/home/CTASection";
 import Faq from "@/components/home/FAQPage";
 import ProductStatistics from "@/components/home/ProductStatistics";
@@ -14,11 +14,11 @@ export default function Home() {
     <>
       <Hero />
       <InfiniteScroll />
-      <OurStrengths />
+      <Reason />
       <ButtonDemo />
+      <PricePage />
       <Testimonials />
       <ProductStatistics />
-      <PricePage />
       <Faq />
       <CTA2Section />
     </>

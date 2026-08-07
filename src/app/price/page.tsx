@@ -12,7 +12,7 @@ import CTA2Section from "@/components/home/CTA2Section";
 export default function PricePage() {
   return (
     <div className="">
-      <CardBanner>
+      <CardBanner className='lg:pb-[96px]'>
         <div className="flex flex-col items-center justify-center w-full max-w-198 mx-auto gap-4 text-center">
           <h1 className="text-[36px] font-semibold tracking-tight leading-snug text-font-primary">
             Penawaran Terbaik Kami Untuk Anda

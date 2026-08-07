@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
     return (
         <div className="flex flex-col w-full items-center justify-between mx-auto max-w-348 bg-background">
-            <CardBanner>
+            <CardBanner className='lg:pb-[96px]'>
                 <div className="flex flex-col items-center justify-center w-full max-w-198 mx-auto gap-4 text-center">
                     <h1 className="text-[36px] font-semibold tracking-tight leading-snug text-font-primary">
                         Komitmen Kami Untuk Menjaga Privasi Anda

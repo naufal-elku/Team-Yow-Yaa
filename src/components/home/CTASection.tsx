@@ -2,7 +2,7 @@ import React from "react";
 
 export default function buttonDemo() {
   return (
-    <section className="bg-foreground px-5 px-12 lg:px-30 lg:py-24">
+    <section className="bg-foreground px-5 py-12 lg:px-30 lg:py-24">
       <div className=" flex flex-col gap-10">
         <div className="flex flex-col gap-4 mx-auto text-center lg:max-w-198">
           <h4 className="text-font-primary text-[32px] font-semibold md:text-[36px] leading-10 lg:leading-11 lg:tracking-[-0.02em]">

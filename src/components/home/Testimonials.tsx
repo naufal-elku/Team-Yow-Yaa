@@ -20,7 +20,7 @@ export default function Testimonials() {
   const last = currentIndex === Testi.length -1;
 
   return (
-    <section className="mx-auto flex w-full flex-col gap-16 px-5 py-12 lg:px-30 lg:py-24 lg:gap-10">
+    <section className="mx-auto flex w-full flex-col gap-10 px-5 py-12 lg:px-30 lg:py-24 lg:gap-10">
       <h4 className="text-center text-[32px] font-semibold text-font-primary leading-10 lg:leading-11 lg:tracking-[-0.02em] lg:text-[36px]">
         Apa Kata Mereka
       </h4>
